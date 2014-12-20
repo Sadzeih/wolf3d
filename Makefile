@@ -5,7 +5,7 @@
 ## Login   <guervi_a@epitech.net>
 ## 
 ## Started on  Tue Dec  9 16:50:16 2014 Alexis Guerville
-## Last update Mon Dec 15 15:38:16 2014 Alexis Guerville
+## Last update Sat Dec 20 15:45:45 2014 Alexis Guerville
 ##
 
 CC	= cc
@@ -14,19 +14,19 @@ NAME	= wolf3d
 
 RM	= rm -f
 
-SRC	= 	events.c \
-	  	parsing.c \
-	  	my_str_to_wordtab.c \
-	  	get_next_line.c \
-	  	functions.c \
-	  	vision.c \
-	  	main.c \
-	  	draw.c \
-		draw_mini_map.c \
-		move.c \
-		my_put_pixel_to_image.c
+SRC	= 	parsing/parsing.c \
+	  	parsing/my_str_to_wordtab.c \
+	  	parsing/get_next_line.c \
+	  	events/events.c \
+	  	events/move.c \
+		draw/vision.c \
+	  	draw/draw.c \
+		draw/draw_mini_map.c \
+		draw/my_put_pixel_to_image.c \
+		functions.c \
+	  	main.c
 
-CFLAGS	= -g -I./include
+CFLAGS	= -I./include
 
 OBJ	= $(SRC:.c=.o)
 

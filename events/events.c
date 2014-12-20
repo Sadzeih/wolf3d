@@ -5,7 +5,7 @@
 ** Login   <guervi_a@epitech.net>
 ** 
 ** Started on  Tue Dec  9 17:39:28 2014 Alexis Guerville
-** Last update Mon Dec 15 15:37:53 2014 Alexis Guerville
+** Last update Fri Dec 19 19:12:04 2014 Alexis Guerville
 */
 
 #include <stdlib.h>
@@ -48,12 +48,6 @@ int     gere_key(t_game *game)
   move(game);
   if (game->keys->escape == 1)
     exit(1);
-  view(game);
-  draw_mini_map(game);
-  mlx_put_image_to_window(game->window->mlx_ptr, game->window->mlx_win,\
-  			  game->window->img, 0, 0);
-  mlx_put_image_to_window(game->window->mlx_ptr, game->window->mlx_win,\
-  			  game->window->mini_map, 30, 30);
 }
 
 int             init_keys(t_game *game)
@@ -67,6 +61,12 @@ int             init_keys(t_game *game)
 
 int	events(t_game *game)
 {
+  view(game);
+  draw_mini_map(game);
+  mlx_put_image_to_window(game->window->mlx_ptr, game->window->mlx_win,	\
+			  game->window->img, 0, 0);
+  mlx_put_image_to_window(game->window->mlx_ptr, game->window->mlx_win,\
+			  game->window->mini_map, 30, 30);
   init_keys(game);
   mlx_hook(game->window->mlx_win, KeyPress, KeyPressMask, &hook_press, game);
   mlx_hook(game->window->mlx_win, KeyRelease, KeyReleaseMask, &hook_release,\

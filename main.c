@@ -5,7 +5,7 @@
 ** Login   <guervi_a@epitech.net>
 ** 
 ** Started on  Tue Dec  9 14:00:10 2014 Alexis Guerville
-** Last update Tue Dec 16 14:10:08 2014 Alexis Guerville
+** Last update Fri Dec 19 19:00:58 2014 Alexis Guerville
 */
 
 #include <unistd.h>
@@ -32,13 +32,15 @@ t_game		*init_game(t_game *game)
     return (0);
   if ((game->player->pos = malloc(sizeof(t_vec))) == NULL)
     return (0);
+  if ((game->draw_minimap = malloc(sizeof(t_draw_minimap))) == NULL)
+    return (0);
   if ((game->window->mlx_ptr = mlx_init()) == 0)
     return (0);
-  game->window->mlx_win = mlx_new_window(game->window->mlx_ptr, 1280, 720,\
+  game->window->mlx_win = mlx_new_window(game->window->mlx_ptr, 1280, 720, \
 					 "wolf ta maman");
-  game->player->pos->x = 1.5;
+  game->player->pos->x = 8.5;
   game->player->pos->y = 1.5;
-  game->player->angle = 0;
+  game->player->angle = 90;
   game->window->img = mlx_new_image(game->window->mlx_ptr, 1280, 720);
   game->window->mini_map = mlx_new_image(game->window->mlx_ptr, 150, 150);
   return (game);
