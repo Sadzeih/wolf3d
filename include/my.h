@@ -5,7 +5,7 @@
 ** Login   <guervi_a@epitech.net>
 ** 
 ** Started on  Tue Dec  9 14:10:57 2014 Alexis Guerville
-** Last update Fri Dec 19 18:13:16 2014 Alexis Guerville
+** Last update Wed Aug 26 00:27:11 2015 Alexis Guerville
 */
 
 #ifndef			MY_H_
@@ -89,5 +89,20 @@ int			**tab_tab_int(char **tab_lines, char *file_name);
 char			**get_tab_lines(int fd, char *file_name);
 char			*my_strdup(char *src);
 int			*my_str_to_wordtab(char *str);
+int			events(t_game *game);
+int			count_lines(char *file_name);
+int			count_words(char *tab_char);
+char			*my_strcpy(char *dest, char *src);
+void			my_pixel_put_to_minimap(t_game *game, int x, int y,\
+					   unsigned int color);
+void			my_pixel_put_to_image(t_game *game, int x, int y,\
+					      unsigned int color);
+int			draw_roof(t_game *game, int x);
+int			draw_walls(t_game *game, int x);
+int			draw_floor(t_game *game, int x);
+int			my_getnbr(char *str);
+int			move(t_game *game);
+int			view(t_game *game);
+int			draw_mini_map(t_game *game);
 
 #endif			/* !MY_H_ */

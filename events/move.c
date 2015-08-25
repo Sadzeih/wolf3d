@@ -5,10 +5,11 @@
 ** Login   <guervi_a@epitech.net>
 ** 
 ** Started on  Mon Dec 15 15:36:45 2014 Alexis Guerville
-** Last update Fri Dec 19 19:18:39 2014 Alexis Guerville
+** Last update Wed Aug 26 00:24:39 2015 Alexis Guerville
 */
 
 #include <math.h>
+#include "mlx.h"
 #include "my.h"
 
 int	forward(t_game *game)

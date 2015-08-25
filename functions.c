@@ -5,10 +5,11 @@
 ** Login   <guervi_a@epitech.net>
 ** 
 ** Started on  Tue Dec  9 18:37:54 2014 Alexis Guerville
-** Last update Sat Dec 13 18:57:27 2014 Alexis Guerville
+** Last update Wed Aug 26 00:27:25 2015 Alexis Guerville
 */
 
 #include <stdlib.h>
+#include "my.h"
 
 int             sign(char *str)
 {
